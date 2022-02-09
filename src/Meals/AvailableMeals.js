@@ -1,7 +1,6 @@
 import React from "react";
 
 import MealItem from "./MealItem.js";
-import MealItemForm from "./MealItemForm";
 
 import classes from "./AvailableMeals.module.css";
 import Card from "../UI/Card.js";
@@ -19,7 +18,6 @@ export default function AvailableMeals() {
             price={meal.price}
           />
         ))}
-        <MealItemForm />
       </Card>
     </div>
   );
