@@ -1,16 +1,18 @@
-import React from "react";
+import React, { Fragment } from "react";
 import "./App.css";
-import MealsSummary from "./Meals/MealsSummary";
-import Header from "./UI/Header";
-import AvailableMeals from "./Meals/AvailableMeals.js";
+import Header from "./Components/Layout/Header";
+import Meals from "./Components/Meals/Meals.js";
+import Cart from "./Components/Cart/Cart";
 
 function App() {
   return (
-    <React.Fragment>
+    <Fragment>
+      <Cart />
       <Header />
-      <MealsSummary />
-      <AvailableMeals />
-    </React.Fragment>
+      <main>
+        <Meals />
+      </main>
+    </Fragment>
   );
 }
 

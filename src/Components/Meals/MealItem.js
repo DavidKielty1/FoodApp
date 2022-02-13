@@ -5,14 +5,16 @@ import MealItemForm from "./MealItemForm";
 import classes from "./MealItem.module.css";
 
 export default function MealItem(props) {
+  const price = `$${props.price.toFixed(2)}`;
+
   return (
-    <ul className={classes.meal}>
+    <li className={classes.meal}>
       <div>
         <h3>{props.name}</h3>
         <div className={classes.description}>{props.description}</div>
-        <p className={classes.price}>${props.price}</p>
+        <div className={classes.price}>{price}</div>
       </div>
-      <MealItemForm />
-    </ul>
+      <MealItemForm  id={props.id}/>
+    </li>
   );
 }
